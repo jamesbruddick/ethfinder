@@ -1,0 +1,17 @@
+{
+	"name": "ethfinder",
+	"version": "1.0.0",
+	"description": "Find Ethereum Addresses",
+	"license": "UNLICENSED",
+	"author": "JamesTGH",
+	"main": "index.mjs",
+	"scripts": {
+		"start": "node index.mjs"
+	},
+	"dependencies": {
+		"bip39": "^3.1.0",
+		"dotenv": "^16.3.1",
+		"ethereumjs-wallet": "^1.0.2",
+		"web3": "^4.0.1"
+	}
+}
