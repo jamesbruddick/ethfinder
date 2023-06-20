@@ -3,6 +3,7 @@ import { promises as fs } from "fs";
 import Wallet from "ethereumjs-wallet";
 import { Web3 } from "web3";
 import bip39 from "bip39";
+import yargs from "yargs";
 
 async function ethFinderAddresses(ethAddressesFile, ethBlockStart = 0, ethBlockRequests = 10000) {
 	const web3 = new Web3(process.env.WEB3_URL);
@@ -79,6 +80,27 @@ async function ethFinderRegex(ethAddressRegex) {
 	}
 	process.stdout.write("\u001b[?25h");
 };
+
+const argv = yargs(process.argv.slice(2))
+	.option("file", {
+		alias: "f",
+		description: "JSON File with Ethereum Addresses",
+		type: "string"
+	})
+	.option("block", {
+		alias: "b",
+		description: "Start Block for Searching Ethereum Addresses",
+		type: "number"
+	})
+	.option("regex", {
+		alias: "r",
+		description: "Search Ethereum Addresses with Regex",
+		type: "string"
+	})
+	.parseSync();
+
+if (argv.file && argv.block) { ethFinderAddresses(argv.file, argv.block); } else if (argv.file) { ethFinder(argv.file); }
+if (argv.regex) { ethFinderRegex(argv.regex) }
 
 process.on("SIGINT", () => { process.stdout.write("\n\u001b[?25h"); process.exit(); });
 process.on("SIGTSTP", () => { process.stdout.write("\n\u001b[?25h"); process.exit(); });
