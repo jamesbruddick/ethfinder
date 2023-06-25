@@ -68,7 +68,7 @@ Here are a few examples to demonstrate the usage of ethfinder:
 node ethfinder.mjs --file ethaddresses.json --block 0
 ```
 
-This command will search for Ethereum addresses and store them in `ethaddresses.json` starting from block number 0.
+This command will search for Ethereum addresses and store them in `ethaddresses.json` starting from block 0.
 
 2. Search for Ethereum addresses private keys from a JSON file:
 
