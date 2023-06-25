@@ -4,9 +4,9 @@
 	"description": "Find Ethereum Addresses",
 	"license": "UNLICENSED",
 	"author": "JamesTGH",
-	"main": "index.mjs",
+	"main": "ethfinder.mjs",
 	"scripts": {
-		"start": "node index.mjs"
+		"start": "node ethfinder.mjs"
 	},
 	"dependencies": {
 		"bip39": "^3.1.0",
