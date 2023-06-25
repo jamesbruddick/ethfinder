@@ -33,7 +33,7 @@ The ethfinder tool provides several options to search for Ethereum addresses. Yo
 To search for Ethereum addresses from start block and append to JSON file, use the following command:
 
 ```bash
-node ethfinder.js --file <file_path> --block <start_block>
+node ethfinder.mjs --file <file_path> --block <start_block>
 ```
 
 Replace `<file_path>` with the path to your JSON file containing Ethereum addresses, and `<start_block>` with the block number from which to start the search.
@@ -43,7 +43,7 @@ Replace `<file_path>` with the path to your JSON file containing Ethereum addres
 To search for Ethereum addresses private keys from a JSON file, use the following command:
 
 ```bash
-node ethfinder.js --file <file_path>
+node ethfinder.mjs --file <file_path>
 ```
 
 Replace `<file_path>` with the path to your JSON file containing Ethereum addresses.
@@ -53,7 +53,7 @@ Replace `<file_path>` with the path to your JSON file containing Ethereum addres
 To search for Ethereum addresses using a regular expression pattern, use the following command:
 
 ```bash
-node ethfinder.js --regex <regex_pattern>
+node ethfinder.mjs --regex <regex_pattern>
 ```
 
 Replace `<regex_pattern>` with your desired regular expression pattern to match against Ethereum addresses.
@@ -65,7 +65,7 @@ Here are a few examples to demonstrate the usage of ethfinder:
 1. Search for Ethereum Addresses from start block and append them to a JSON file:
 
 ```bash
-node ethfinder.js --file ethaddresses.json --block 0
+node ethfinder.mjs --file ethaddresses.json --block 0
 ```
 
 This command will search for Ethereum addresses and store them in `ethaddresses.json` starting from block number 0.
@@ -73,7 +73,7 @@ This command will search for Ethereum addresses and store them in `ethaddresses.
 2. Search for Ethereum addresses private keys from a JSON file:
 
 ```bash
-node ethfinder.js --file ethaddresses.json
+node ethfinder.mjs --file ethaddresses.json
 ```
 
 This command will search for Ethereum addresses private keys for each address in the `ethaddresses.json` file.
@@ -81,7 +81,7 @@ This command will search for Ethereum addresses private keys for each address in
 3. Search for Ethereum addresses using a regular expression pattern:
 
 ```bash
-node ethfinder.js --regex "^0x[a-zA-Z0-9]+$"
+node ethfinder.mjs --regex "^0x[a-zA-Z0-9]+$"
 ```
 
 This command will search for Ethereum addresses that match the regular expression pattern `^0x[a-zA-Z0-9]+$`.
