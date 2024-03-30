@@ -1,18 +1,19 @@
 {
-	"name": "ethfinder",
-	"version": "1.0.0",
-	"description": "Find Ethereum Addresses",
-	"license": "UNLICENSED",
-	"author": "JamesTGH",
-	"main": "ethfinder.mjs",
-	"scripts": {
-		"start": "node ethfinder.mjs"
-	},
-	"dependencies": {
-		"bip39": "^3.1.0",
-		"dotenv": "^16.3.1",
-		"ethereumjs-wallet": "^1.0.2",
-		"web3": "^4.1.1",
-		"yargs": "^17.7.2"
-	}
+  "name": "ethfinder",
+  "version": "1.0.0",
+  "description": "Find Ethereum Addresses",
+  "homepage": "https://github.com/jamesbruddick/ethfinder",
+  "license": "MIT",
+  "author": "jamesbruddick",
+  "main": "ethfinder.mjs",
+  "scripts": {
+    "start": "node ethfinder.mjs"
+  },
+  "dependencies": {
+    "bip39": "^3.1.0",
+    "dotenv": "^16.4.5",
+    "ethereumjs-wallet": "^1.0.2",
+    "web3": "^4.7.0",
+    "yargs": "^17.7.2"
+  }
 }
